@@ -1,0 +1,90 @@
+body {
+    background-color: #e0f5ff;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.customizeMessage {
+    padding: 15px 0px 5px;
+}
+
+.description {
+    align-self: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding: 10px 0px 10px;
+}
+
+.dotBlue {
+    background-color: #2dafeb;
+    border-radius: 50%;
+    display: inline-block;
+    height: 20px;
+    margin: 0 10px 0;
+    width: 20px;
+}
+
+.dotPink {
+    background-color: #db0d89;
+    border-radius: 50%;
+    display: inline-block;
+    height: 20px;
+    margin: 0 10px 0;
+    width: 20px;
+}
+
+.dotYellow {
+    background-color: #f7d54d;
+    border-radius: 50%;
+    display: inline-block;
+    height: 20px;
+    margin: 0 10px 0;
+    width: 20px;
+}
+
+.imageRequirement {
+    color: gray;
+    font-size: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.umbrellaImage{ 
+    align-self: center;
+    color: white;
+    height: 50%;
+    width: 30%;
+    
+}
+
+.uploadButton {
+    background-color: #2dafeb;
+    color: white;
+    cursor: pointer;
+    height: 25px;
+    padding: 10px 10px 10px;
+    width: 300px;
+}
+
+.uploadIcon{
+    filter: invert(100%);
+}
+
+.uploadInput {
+    opacity: 0;
+    /* position: absolute; */
+    z-index: -1;
+}
+
+.uploadLabel{
+    float: right;
+    height: 25px;
+    text-align: center;
+    padding: 4px 35px 0px 5px;
+    width: 70%;
+}
+
+.uploadMessage {
+    color: gray;
+    font-size:12px;
+    padding: 5px 0px 5px;
+}

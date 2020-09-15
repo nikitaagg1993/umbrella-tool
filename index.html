@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <img class="umbrellaImage" src="static/blue-umbrella.png" id="umbrella-image">
+        <div class="description">
+            <h1 class="itemName"> Custom Umbrella </h1>
+            <span class="dotBlue" onclick="colorSwitch('blue')"></span>
+            <span class="dotYellow" onclick="colorSwitch('yellow')"></span>
+            <span class="dotPink" onclick="colorSwitch('pink')"></span>
+            <div class="customizeMessage"> Customize your Umbrella </div>
+            <div class="uploadMessage"> Upload a logo for instant preview</div>
+            <div class="imageRequirement"> .png and .jpg file only. Max size 5MB</div>
+            <div class="uploadButton" id="upload-button">
+                <img src="static/upload_icon.svg" class="uploadIcon">
+                <label class="uploadLabel" for="upload-input"> UPLOAD LOGO</label>
+                <input type="file" name="photo" class="uploadInput" id="upload-input"/>
+            </div>
+        </div>
+    </body>
+</html>
