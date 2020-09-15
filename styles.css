@@ -48,6 +48,16 @@ body {
     margin-bottom: 20px;
 }
 
+.logo {
+    display :none;
+    height: 15px;
+    position:absolute;
+    top: 650px;
+    left: 500px;
+    width: 90px;
+    z-index: 2;
+}
+
 .umbrellaImage{ 
     align-self: center;
     color: white;
