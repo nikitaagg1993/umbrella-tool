@@ -49,7 +49,7 @@ function addLogo(loaderFilter) {
         loaderImage.src="static/loader_icon.svg";
         loaderImage.className="loader";
 
-        parent.replaceChild(loaderImage,umbrellaPicture)
+        parent.replaceChild(loaderImage,umbrellaPicture);
 
         let uploadButton = document.getElementById("upload-icon");
         // changing upload icon to loader
@@ -67,7 +67,6 @@ function addLogo(loaderFilter) {
         //update upload file button label
         if(uploadedFile && uploadedFile.length)
         document.getElementById("label-text").innerHTML = uploadedFile[0].name;
-
 
         setTimeout(() => {
             // displaying upload icon on button
