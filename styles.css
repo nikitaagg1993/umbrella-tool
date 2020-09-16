@@ -58,9 +58,9 @@ body {
 .logo {
     display :none;
     height: 15px;
+    left: 500px;
     position:absolute;
-    top: 630px;
-    left: 545px;
+    top: 530px;
     width: 90px;
     z-index: 2;
 }
@@ -71,12 +71,11 @@ body {
 }
 
 .loader{
-    margin-top: 225px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
     align-items: center;
     animation: rotation 2s infinite linear;
+    display: block;
+    filter: invert(1) brightness(0.5) sepia(1) saturate(700%) hue-rotate(180deg);
+    margin: 180px auto 0px;
 }
 
 .loaderIcon {
