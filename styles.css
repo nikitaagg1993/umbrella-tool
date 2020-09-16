@@ -41,12 +41,17 @@ body {
     width: 20px;
 }
 
+.imageContainer {
+    position: relative;
+}
+
 .imageRequirement {
     color: gray;
     font-size: 10px;
     padding-bottom: 5px;
     margin-bottom: 20px;
 }
+
 .labelText {
     display: flex;
     font-size: 100%;
@@ -58,9 +63,9 @@ body {
 .logo {
     display :none;
     height: 15px;
-    left: 500px;
+    top: 89%;
+    left: 41%;
     position:absolute;
-    top: 530px;
     width: 90px;
     z-index: 2;
 }
