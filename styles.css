@@ -47,36 +47,73 @@ body {
     padding-bottom: 5px;
     margin-bottom: 20px;
 }
+.labelText {
+    display: flex;
+    font-size: 100%;
+    justify-content: center;
+    padding-top: 4px;
+    text-align: center;
+}
 
 .logo {
     display :none;
     height: 15px;
     position:absolute;
-    top: 650px;
-    left: 500px;
+    top: 630px;
+    left: 545px;
     width: 90px;
     z-index: 2;
 }
 
-.umbrellaImage{ 
-    align-self: center;
-    color: white;
+.umbrellaImage { 
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.loader{
+    margin-top: 225px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    align-items: center;
+    animation: rotation 2s infinite linear;
+}
+
+.loaderIcon {
+    height: 25px;
+    animation: rotation 2s infinite linear;
+}
+
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+.umbrellaImageContainer {
     height: 50%;
     width: 30%;
-    
+    margin-left: 200px; 
+    align-self: center;
+    color: white;
 }
 
 .uploadButton {
     background-color: #2dafeb;
     color: white;
     cursor: pointer;
-    height: 25px;
+    height: 30px;
     padding: 10px 10px 10px;
     width: 300px;
 }
 
 .uploadIcon{
     filter: invert(100%);
+    float: left;
 }
 
 .uploadInput {
@@ -86,11 +123,11 @@ body {
 }
 
 .uploadLabel{
-    float: right;
+    float: left;
     height: 25px;
     text-align: center;
-    padding: 4px 35px 0px 5px;
-    width: 70%;
+    /* padding: 4px 35px 0px 5px; */
+    width: 300px;
 }
 
 .uploadMessage {
