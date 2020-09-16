@@ -22,6 +22,8 @@ const buttonMapping = {
 };
 
 let uploadedFile;
+let imageSource;
+let umbrella;
 
 // adding event to detect when a file has been uploaded
 window.addEventListener('load', function() {
@@ -34,17 +36,20 @@ window.addEventListener('load', function() {
 // to attach a logo to image
 //umbrella is the new umbrella image when different color is selected
 // loaderFilter is the css filter for the loader
-function addLogo(umbrella, loaderFilter) {
+function addLogo(loaderFilter) {
 
     if (uploadedFile && uploadedFile[0]) {
-        let umbrellaPicture = document.getElementById("umbrella-image")
-        let imageSource = umbrellaPicture.src;
+        let umbrellaPicture = document.getElementById("umbrella-image");
+        imageSource = umbrellaPicture.src;
+ 
+        let parent = document.getElementById("image-container");
 
-        // changing umbrella image to loader
-        umbrellaPicture.src="static/loader_icon.svg";
-        umbrellaPicture.className="loader";
-        if(loaderFilter) umbrellaPicture.style.filter = loaderFilter;
+        let loaderImage = document.createElement("img");
+        if(loaderFilter) loaderImage.style.filter = loaderFilter;
+        loaderImage.src="static/loader_icon.svg";
+        loaderImage.className="loader";
 
+        parent.replaceChild(loaderImage,umbrellaPicture)
 
         let uploadButton = document.getElementById("upload-icon");
         // changing upload icon to loader
@@ -60,6 +65,7 @@ function addLogo(umbrella, loaderFilter) {
         img.style.display = 'none';
 
         //update upload file button label
+        if(uploadedFile && uploadedFile.length)
         document.getElementById("label-text").innerHTML = uploadedFile[0].name;
 
 
@@ -69,9 +75,14 @@ function addLogo(umbrella, loaderFilter) {
             uploadButton.className = "uploadIcon";
 
             // Adding umbrella picture and disabling filter
-            umbrellaPicture.style.filter= 'none';
-            umbrellaPicture.src = umbrella || imageSource;
-            umbrellaPicture.className = "umbrellaImage";
+            let newUmbrellaPicture = document.createElement("img");
+            newUmbrellaPicture.style.filter= 'none';
+            newUmbrellaPicture.src = umbrella || imageSource;
+            newUmbrellaPicture.className = "umbrellaImage";
+            newUmbrellaPicture.id = "umbrella-image";
+
+            parent.replaceChild(newUmbrellaPicture, loaderImage);
+
             uploadButton.disabled = false;
 
             // using uploaded file to create logo
@@ -84,7 +95,8 @@ function addLogo(umbrella, loaderFilter) {
 
 // to change theme
 function colorSwitch(color) {
-    addLogo(buttonMapping[color].image, buttonMapping[color].loaderFilter);
+    umbrella = buttonMapping[color].image;
+    addLogo(buttonMapping[color].loaderFilter);
     if(!uploadedFile || !uploadedFile.length) document.getElementById("umbrella-image").src = buttonMapping[color].image;
     document.getElementById("upload-label").style.backgroundColor = buttonMapping[color].buttonColor;
     document.body.style.backgroundColor = buttonMapping[color].backgroundColor;
