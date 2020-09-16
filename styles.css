@@ -4,6 +4,7 @@ body {
 .container {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 125px;
 }
 
 .customizeMessage {
